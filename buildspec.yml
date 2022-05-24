@@ -14,8 +14,7 @@ phases:
     commands:
     - echo Build started on `date`
     - echo Building Java
-    - mvn compile
-    - mvn package -DskipTests
+    - mvn clean
     - echo Building the docker image..
     - docker build -t pms-portal-repository-890387 .
     - docker tag pms-portal-repository-890387:latest 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-portal-repository-890387:latest
@@ -28,4 +27,4 @@ phases:
     - printf '[{"name":"auth-container","imageUri":"%s"}]' 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-portal-repository-890387:latest > imagedefinitions.json
 artifacts:
   files:
-  - pensionmanagementportal/imagedefinitions.json
+  - pension-management-portal/imagedefinitions.json
