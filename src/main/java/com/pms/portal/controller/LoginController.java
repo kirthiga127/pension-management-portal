@@ -33,6 +33,7 @@ public class LoginController {
 	 * @param model
 	 * @return login view
 	 */
+	//
 	@GetMapping(value = "/login")
 	public String showLoginPage(@ModelAttribute("user") JwtRequest user, Model model) {
 		return "login";
