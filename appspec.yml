@@ -3,7 +3,7 @@ Resources:
 - TargetService:
 Type: AWS::ECS::Service
 Properties:
-TaskDefinition: "arn:aws:ecs:us-east-1:156962844638:task-definition/pms-portal-td-890387:1"
+TaskDefinition: "arn:aws:ecs:us-east-1:156962844638:task-definition/pms-portal-td-890387:3"
 LoadBalancerInfo:
 ContainerName: "pms-portal-container-890387"
 ContainerPort: 8500
