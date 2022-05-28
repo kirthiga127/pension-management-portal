@@ -8,7 +8,7 @@ phases:
   - echo Logging in to Amazon ECR...
   - aws --version
   - TAG="$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)"
-  - IMAGE_URI=156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-portal-repository-890387:${TAG}
+  - IMAGE_URI=156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-portal-repository-890387:1
  build:
   commands:
   - echo Build started on `date`
