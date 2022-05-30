@@ -40,7 +40,7 @@ public class PensionerDetailController {
 	
 	
 	
-	@GetMapping("/showHomePage")
+	/*@GetMapping("/showHomePage")
 	public String showHomePage()
 	{
 		return "admin-welcome-page";
@@ -57,7 +57,7 @@ public class PensionerDetailController {
 	{
 
 		return "find-pensioner-by-aadhar";
-	}
+	}*/
 	
 	
 	@GetMapping("/getPensionerByAadhar")
