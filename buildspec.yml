@@ -9,12 +9,12 @@ phases:
   - aws --version
   - echo Kirthi128 | docker login --username kirthiga --password-stdin
   - TAG="$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)"
-  - IMAGE_URI=156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-portal-repository-890387:${TAG}
+  - IMAGE_URI=156962844638.dkr.ecr.us-east-1.amazonaws.com/890387-portal-repository:${TAG}
  build:
   commands:
   - echo Build started on `date`
   - echo $IMAGE_URI
-  - mvn clean
+  - mvn clean package -Ddockerfile.skip
   - docker build --tag $IMAGE_URI .
  post_build:
   commands:
@@ -25,7 +25,7 @@ phases:
   - echo Pushing docker image
   - docker push $IMAGE_URI
   - echo push completed
-  - printf '[{"name":"%s","imageUri":"%s"}]' pms-portal-container-890387 $IMAGE_URI > imagedefinitions.json
+  - printf '[{"name":"%s","imageUri":"%s"}]' 890387-portal-container $IMAGE_URI > imagedefinitions.json
 artifacts:
   files:
   - imagedefinitions.json
