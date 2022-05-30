@@ -40,26 +40,6 @@ public class PensionerDetailController {
 	
 	
 	
-	/*@GetMapping("/showHomePage")
-	public String showHomePage()
-	{
-		return "admin-welcome-page";
-	}
-	
-	
-	
-	
-	
-	
-	
-	@GetMapping("/showPensionerByAadhar")
-	public String getPensionerDetailByAadhar()
-	{
-
-		return "find-pensioner-by-aadhar";
-	}*/
-	
-	
 	@GetMapping("/getPensionerByAadhar")
 	public ModelAndView showPensionerDetailByAadhar(HttpServletRequest request,@RequestParam long aadhar) throws AuthorizationException, AadharNumberNotFound
 	{
@@ -219,7 +199,7 @@ public class PensionerDetailController {
 	}
 	@GetMapping("/health-check")
 	public ResponseEntity<String> healthCheck() {
-		return new ResponseEntity<>("auth-Ok", HttpStatus.OK);
+		return new ResponseEntity<>("portal-Ok", HttpStatus.OK);
 	}
 	
 }
