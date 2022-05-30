@@ -18,7 +18,8 @@ import io.swagger.annotations.ApiOperation;
 
 
 
-@FeignClient(name = "processpension-microservice", url = "http://localhost:8100/process/api/final")
+//@FeignClient(name = "processpension-microservice", url = "http://localhost:8100/process/api/final")
+FeignClient(name = "processpension-microservice", url = "http://890387-process-pension-lb-1251727635.us-east-1.elb.amazonaws.com/process/api/final")
 public interface ProcessPensionFeignClient {
 
 	@PostMapping("/PensionDetail")
